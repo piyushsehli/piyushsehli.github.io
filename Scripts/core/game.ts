@@ -10,15 +10,18 @@
     let ScoreBoard: managers.ScoreBoard;
 
     let Manifest = [
-        {id: "StartButton", src:"/Assets/images/StartButton.png"},
-        {id: "RestartButton", src:"/Assets/images/RestartButton.png"},
+        {id: "play", src:"/Assets/images/png/play.png"},
+        {id: "close", src:"/Assets/images/png/closesign.png"},
+        {id: "info", src:"/Assets/images/png/info.png"},
         {id: "plane", src:"/Assets/images/png/player.png"},
         {id: "background", src:"/Assets/images/png/starBackground.png"},
         {id: "ufo", src:"/Assets/images/png/enemyUFO.png"},
         {id: "meteor", src:"/Assets/images/png/meteorBig.png"},
         {id: "bullet", src:"/Assets/images/png/laserRed.png"},
         {id: "enemy", src:"/Assets/images/png/enemyShip.png"},
+        {id: "enemy", src:"/Assets/images/png/enemyShip.png"},
         {id: "coin", src:"/Assets/audio/coin.wav"},
+        {id: "button", src:"/Assets/audio/button.wav"},
         {id: "explosion", src:"/Assets/audio/explosion.mp3"},
         {id: "backgroundMusic", src:"/Assets/audio/background.wav"},
         {id: "bulletSound", src:"/Assets/audio/bullet.mp3"}
@@ -85,6 +88,10 @@
 
             case config.Scene.END:
             CurrentScene = new scenes.End();
+            break;
+
+            case config.Scene.INFORMATION:
+            CurrentScene = new scenes.Information();
             break;
         }
 

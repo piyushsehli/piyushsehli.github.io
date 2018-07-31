@@ -111,9 +111,8 @@ var scenes;
                 var enemy = _c[_b];
                 this.addChild(enemy);
             }
-            // handaling click event for bullets
+            // handling click event for bullets
             this._background.on("click", function () {
-                // cerate a new object every time and add into list
                 var bullet;
                 bullet = new objects.Bullet();
                 bullet.y = this._plane.y;

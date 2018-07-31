@@ -15,7 +15,6 @@ module scenes {
         // constructors
         constructor() {
             super();
-
             this.Start();
         }
 
@@ -138,18 +137,16 @@ module scenes {
                 this.addChild(enemy);
             }
 
-            // handaling click event for bullets
+            // handling click event for bullets
       this._background.on(
         "click",
         function() {
-          // cerate a new object every time and add into list
           let bullet: objects.Bullet;
           bullet = new objects.Bullet();
           bullet.y = this._plane.y;
           bullet.x = this._plane.x;
           this._bulletClicked.push(bullet);
           this.addChild(bullet);
-          
         },
         this
       );
